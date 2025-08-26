@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Clerk Callback</title>
+    <script>
+      // Recibe el token de Clerk OAuth
+      const params = new URLSearchParams(window.location.search);
+      const token = params.get("session_token");
+
+      // Aquí puedes enviarlo a tu app Tauri
+      console.log("Token recibido de Clerk:", token);
+
+      // Opcional: si Tauri está escuchando, se puede enviar mediante postMessage
+      if (window.opener) {
+        window.opener.postMessage({ token }, "*");
+      }
+
+      // Cierra la ventana automáticamente
+      window.close();
+    </script>
+  </head>
+  <body>
+    <p>Procesando login...</p>
+  </body>
+</html>
