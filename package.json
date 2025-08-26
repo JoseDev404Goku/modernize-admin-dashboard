@@ -1,0 +1,13 @@
+{
+  "name": "clerk-callback",
+  "version": "1.0.0",
+  "description": "Callback HTML para Clerk OAuth",
+  "main": "index.html",
+  "scripts": {
+    "build": "echo 'Build completado'",
+    "start": "echo 'Servidor iniciado'"
+  },
+  "keywords": ["clerk", "oauth", "callback"],
+  "author": "JoseDev404Goku",
+  "license": "MIT"
+}
